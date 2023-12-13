@@ -29,6 +29,20 @@ Before running the project, make sure you have the following software installed 
 
    You should see the version number of Node.js v18.
 
+### Environment variables
+
+1. Copy environment example file to .env using the following command
+```bash
+cp .env.example .env
+```
+
+### `npm install`
+1. Run npm install to install dependencies using the following command
+
+```bash
+npm install
+```
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -50,6 +64,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - styled-components for styling
 - axios for api call.
 - lodash.debounce for debouncing instead of searching as user types
+- jest and it's related plugins for testing
 
 ### Loom Video
 https://www.loom.com/share/bcb6664ca218436fa8c30d5cff33121c
