@@ -50,3 +50,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - styled-components for styling
 - axios for api call.
 - lodash.debounce for debouncing instead of searching as user types
+
+### Loom Video
+https://www.loom.com/share/bcb6664ca218436fa8c30d5cff33121c
