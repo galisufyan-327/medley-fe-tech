@@ -8,7 +8,7 @@ interface PayoutParams {
   query?: string;
 }
 
-class PayoutServie {
+class PayoutService {
   static getPayouts(params: PayoutParams) {
     return thirdPartyService({
       method: 'GET',
@@ -26,4 +26,4 @@ class PayoutServie {
   }
 }
 
-export default PayoutServie
+export default PayoutService

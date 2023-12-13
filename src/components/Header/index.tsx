@@ -6,7 +6,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <FlexBox>
       <EmptyBox />
-      <Box>{title}</Box>
+      <Box data-testid="sub-heading">{title}</Box>
     </FlexBox>
   )
 }

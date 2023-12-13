@@ -12,7 +12,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, placeholder, onChange 
     onChange(e.target.value);
   };
 
-  return <StyledSearchInput value={value} type="text" placeholder={placeholder} onChange={handleInputChange} />;
+  return <StyledSearchInput data-testid='search-input' value={value} type="text" placeholder={placeholder} onChange={handleInputChange} />;
 };
 
 export default SearchInput;

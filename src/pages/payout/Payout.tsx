@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo } from 'react'
 import PayoutList from '../../components/PayoutList'
 import Header from '../../components/Header';
 import { HeadingTwo, Container, FlexContainer } from './styles';
-import PayoutServie from '../../services/modules/payout';
+import PayoutService from '../../services/modules/payout';
 import Loader from '../../components/Loader';
 import Pagination from '../../components/Pagination';
 import { MetaData } from '../../interfaces/payout';
@@ -27,7 +27,7 @@ const Payout: React.FC = () => {
         page,
       }
 
-      const response = await PayoutServie.getPayouts(params)
+      const response = await PayoutService.getPayouts(params)
       const { data, metadata } = response.data
 
       setPayouts(data)
@@ -44,8 +44,8 @@ const Payout: React.FC = () => {
   const searchPayouts = useCallback(async (searchValue: string) => {
     setLoading(true);
     try {
-      const response = await PayoutServie.searchPayouts({ query: searchValue });
-      const searchData = response.data;
+      const response = await PayoutService.searchPayouts({ query: searchValue });
+      const searchData = response?.data || [];
 
       setPayouts(searchData);
 
@@ -97,7 +97,7 @@ const Payout: React.FC = () => {
 
   return (
     <div>
-      <HeadingTwo>Payouts</HeadingTwo>
+      <HeadingTwo data-testid="main-heading">Payouts</HeadingTwo>
       <Container>
         {loading ? (
           <Loader />
