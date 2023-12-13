@@ -11,7 +11,7 @@ import debounce from 'lodash.debounce'
 
 const Payout: React.FC = () => {
   const [payouts, setPayouts] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   const [searchTerm, setSearchTerm] = React.useState('');
   const [metaData, setMetaData] = React.useState<MetaData>({
     limit: 10,
